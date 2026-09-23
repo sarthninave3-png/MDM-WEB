@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive FAQ</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-indigo-950 via-slate-900 to-blue-950 flex items-center justify-center p-4">
+
+    <div class="bg-slate-800 p-8 rounded-2xl shadow-2xl w-full max-w-lg border border-slate-700">
+
+        <!-- Heading -->
+        <h2 class="text-3xl font-bold text-center text-cyan-400 mb-3">
+            Campus Help Center
+        </h2>
+
+        <p class="text-center mb-7 text-slate-300">
+            <b>Student Learning Support</b>
+        </p>
+
+        <p class="text-sm text-center text-slate-400 mb-6">
+            Find answers to your questions below.
+        </p>
+
+        <!-- FAQ 1 -->
+        <div class="mb-4">
+
+            <button class="question w-full text-left p-4 bg-slate-700 text-white rounded-lg hover:bg-indigo-600 transition duration-300 font-medium">
+
+                1. Can students with no prior knowledge join?
+
+            </button>
+
+            <p class="answer hidden p-4 bg-slate-900 text-slate-300 rounded-b-lg">
+
+                Absolutely! Our courses are designed for learners at different skill levels, including complete beginners.
+
+            </p>
+
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="mb-4">
+
+            <button class="question w-full text-left p-4 bg-slate-700 text-white rounded-lg hover:bg-indigo-600 transition duration-300 font-medium">
+
+                2. What is the process for joining a course?
+
+            </button>
+
+            <p class="answer hidden p-4 bg-slate-900 text-slate-300 rounded-b-lg">
+
+                Select your preferred course, click the Enroll Now button, and follow the instructions to register successfully.
+
+            </p>
+
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="mb-4">
+
+            <button class="question w-full text-left p-4 bg-slate-700 text-white rounded-lg hover:bg-indigo-600 transition duration-300 font-medium">
+
+                3. Will I receive a certificate after completion?
+
+            </button>
+
+            <p class="answer hidden p-4 bg-slate-900 text-slate-300 rounded-b-lg">
+
+                Yes! Students receive a course completion certificate after successfully completing the required course activities.
+
+            </p>
+
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="mb-4">
+
+            <button class="question w-full text-left p-4 bg-slate-700 text-white rounded-lg hover:bg-indigo-600 transition duration-300 font-medium">
+
+                4. Are classes conducted live or through recordings?
+
+            </button>
+
+            <p class="answer hidden p-4 bg-slate-900 text-slate-300 rounded-b-lg">
+
+                We provide live learning sessions along with recorded lectures so students can revisit the lessons whenever needed.
+
+            </p>
+
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="mb-5">
+
+            <button class="question w-full text-left p-4 bg-slate-700 text-white rounded-lg hover:bg-indigo-600 transition duration-300 font-medium">
+
+                5. Is there an installment payment option?
+
+            </button>
+
+            <p class="answer hidden p-4 bg-slate-900 text-slate-300 rounded-b-lg">
+
+                Currently, the complete course fee must be paid in a single payment during enrollment.
+
+            </p>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center border-t border-slate-700 pt-5">
+
+            <p class="text-sm text-slate-400">
+                Still have questions?
+            </p>
+
+            <p class="text-cyan-400 font-semibold mt-1">
+                Contact the Student Support Team
+            </p>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // Get all questions
+        let questions = document.querySelectorAll(".question");
+
+        // Add click event to each question
+        questions.forEach(function(question) {
+
+            question.addEventListener("click", function() {
+
+                // Get the corresponding answer
+                let answer = question.nextElementSibling;
+
+                // Show or hide the answer
+                answer.classList.toggle("hidden");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
